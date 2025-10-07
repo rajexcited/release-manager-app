@@ -2,6 +2,8 @@ FROM node:24-slim
 
 WORKDIR /usr/app/release-manager-app
 
+EXPOSE 3000
+
 COPY package.json package-lock.json ./
 RUN npm ci --production
 RUN npm cache clean --force
