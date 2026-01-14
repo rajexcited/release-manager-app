@@ -25,20 +25,20 @@ default_events:
   # - issue_comment
   - issues
 # - label
-# - milestone
+  - milestone
 # - member
 # - membership
 # - org_block
 # - organization
 # - page_build
-# - project
-# - project_card
-# - project_column
+  - project
+  - project_card
+  - project_column
 # - public
-# - pull_request
+  - pull_request
 # - pull_request_review
-# - pull_request_review_comment
-# - push
+  - pull_request_review_comment
+  - push
 # - release
 # - repository
 # - repository_import
@@ -62,11 +62,11 @@ default_permissions:
 
   # Repository contents, commits, branches, downloads, releases, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-contents
-  # contents: read
+  contents: write
 
   # Deployments and deployment statuses.
   # https://developer.github.com/v3/apps/permissions/#permission-on-deployments
-  # deployments: read
+  deployments: read
 
   # Issues and related comments, assignees, labels, and milestones.
   # https://developer.github.com/v3/apps/permissions/#permission-on-issues
@@ -82,15 +82,15 @@ default_permissions:
 
   # Pull requests and related comments, assignees, labels, milestones, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests
-  # pull_requests: read
+  pull_requests: write
 
   # Manage the post-receive hooks for a repository.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-hooks
-  # repository_hooks: read
+  repository_hooks: read
 
   # Manage repository projects, columns, and cards.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-projects
-  # repository_projects: read
+  repository_projects: write
 
   # Retrieve security vulnerability alerts.
   # https://developer.github.com/v4/object/repositoryvulnerabilityalert/
@@ -124,14 +124,13 @@ default_permissions:
   # https://developer.github.com/v3/apps/permissions/
   # organization_administration: read
 # The name of the GitHub App. Defaults to the name specified in package.json
-# name: My Probot App
+name: Release Manager Probot App
 
 # The homepage of your GitHub App.
 # url: https://example.com/
 
 # A description of the GitHub App.
-# description: A description of my awesome app
-
+description: A Probot app to manage release end to end flow by recipe configurations.
 # Set to true when your GitHub App is available to the public or false when it is only accessible to the owner of the app.
 # Default: true
 # public: false
